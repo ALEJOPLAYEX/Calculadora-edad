@@ -1,0 +1,135 @@
+/* Importar la fuente Poppins desde Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;800&display=swap');
+
+/* Definir las variables de color */
+:root {
+    --purple-500: hsl(259, 100%, 65%); /* Purple */
+    --red-400: hsl(0, 100%, 67%); /* Red */
+    --white: hsl(0, 100%, 100%); /* White */
+    --grey-100: hsl(0, 0%, 94%); /* Grey 100 */
+    --grey-200: hsl(0, 0%, 86%); /* Grey 200 */
+    --grey-500: hsl(0, 1%, 44%); /* Grey 500 */
+    --black: hsl(0, 0%, 0%); /* Black */
+}
+
+/* Establecer propiedades globales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--grey-100);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: var(--grey-500);
+}
+
+.container {
+    width: 100%;
+    max-width: 1440px;  /* Desktop */
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+}
+
+.form-container {
+    background-color: var(--white);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--purple-500);
+}
+
+.input-group {
+    margin-bottom: 1.5rem;
+}
+
+label {
+    font-size: 1.1rem;
+    color: var(--grey-500);
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+input[type="number"] {
+    width: 100%;
+    padding: 1rem;
+    font-size: 32px;  /* Tamaño de fuente de inputs */
+    border: 2px solid var(--grey-200);
+    border-radius: 5px;
+    outline: none;
+    color: var(--grey-500);
+}
+
+input[type="number"]:focus {
+    border-color: var(--purple-500);
+}
+
+button {
+    width: 100%;
+    padding: 1rem;
+    background-color: var(--purple-500);
+    color: var(--white);
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: var(--red-400);
+}
+
+/* Mostrar resultados */
+.age-result p {
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 1rem 0;
+}
+
+#error-message {
+    color: var(--red-400);
+    font-size: 1rem;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+/* Mobile-first design (pantallas pequeñas) */
+@media (max-width: 375px) {
+    .form-container {
+        padding: 1rem;
+    }
+
+    input[type="number"], button {
+        font-size: 32px;
+    }
+}
+
+/* Pantalla de tamaño medio y superior (Desktop: 1440px) */
+
+@media (min-width: 1440px) {
+    .container {
+        padding: 2rem;
+    }
+}
+
+/* Optimización para la accesibilidad */
+input[type="number"]:focus, button:focus {
+    outline: 3px solid var(--purple-500);
+}
