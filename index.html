@@ -15,23 +15,36 @@
   </style>
 </head>
 <body>
-
-  Day
-  DD
-
-  Month
-  MM
-
-  Year
-  YYYY
-
-  -- years
-  -- months
-  -- days
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your ALEJOPLAYEX-DEV</a>.
+<div class="container">
+  <div class="form-container">
+    <h1>Calculadora de Edad</h1>
+    <form id="age-form">
+      <div class="input-group">
+        <label for="day">Dia</label>
+        <input type="number" id="day" name="day" min="1" max="31" required>
+      </div>
+      <div class="input-group">
+        <label for="month">Mes</label>
+        <input type="number" id="month" name="month" min="1" max="12" required>
+      </div>
+      <div class="input-group">
+        <label for="year">Año</label>
+        <input type="number" id="year" name="year" required>
+    </div>
+    <button type="submit" id="submit-btn">Calcular Edad</button>
+    </form>
+    <div id="error-message"></div>
+    <div id="age-result" class="age-result">
+      <p id="years">0 Años</p>
+      <p id="months">0 Meses</p>
+      <p id="days">0 Dias</p>
+    </div>
   </div>
+</div>
+<footer class="attribution">
+  Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+  Coded by <a href="https://github.com/ALEJOPLAYEX/Calculadora-edad">ALEJOPLAYEX-DEV</a>.
+</footer> 
+
 </body>
 </html>
